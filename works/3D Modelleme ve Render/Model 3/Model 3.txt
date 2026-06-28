@@ -1,0 +1,1 @@
+Üç bacaklı, fütüristik bir gözcü robot konseptidir. Sert yüzey (hard-surface) modelleme teknikleri ve ışıklandırma üzerine odaklanılmış statik bir çalışmadır.

@@ -1,0 +1,90 @@
+title: "Tolga Ersan"
+description: "Endüstriyel Tasarımcı Portfolyosu"
+baseurl: ""
+url: "https://tolgaersan.github.io"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .scratch_parts/
+  - .scratch_gen_spec.py
+  - _data_source_site_yazılar.txt
+  - assemble_spec.py
+  - node_modules/
+  - vendor/
+
+env:
+  production:
+    url: "https://tolgaersan.github.io"
+name: "TOLGA ERSAN"
+tagline: "Endüstriyel Tasarımcı"
+hero_greeting: "Merhaba!"
+hero_description: "Yenilikçi fikirlere açık, estetik ve fonksiyonu birleştirerek hikayesi olan ürünler yaratan bir Endüstriyel Tasarımcıyım."
+
+about_bio: >
+  Yenilikçi fikirlere açık, çözüm odaklı bir Endüstriyel Tasarımcıyım. 
+  Tasarımı sadece bir iş değil, hayatı kolaylaştıran bir araç olarak görüyorum. 
+  Eğitimim boyunca teorik bilgimi freelance projelerle destekledim. 
+  Ürün görselleştirme ve konsept tasarımı gibi alanlarda çalışarak, 
+  fikirleri profesyonel sunumlara dönüştürme konusunda deneyim kazandım. 
+  Hedefim estetik ve fonksiyonu birleştirerek hikayesi olan ürünler yaratmak. 
+  Kullanıcı deneyimini merkeze alan, sürdürülebilir ve akılcı tasarımlar üretmek en büyük motivasyonum.
+
+contact_phone: "+90 538 812 9484"
+contact_email: "tolgaersan.design@gmail.com"
+contact_location: "Tekirdağ/Türkiye"
+
+nav_links:
+  - label: "Çalışmalar"
+    url: "/works/"
+  - label: "Hakkımda"
+    url: "/about/"
+
+experience:
+  - role: "Endüstriyel Tasarımcı"
+    company: "Evimetal İnox Yapı Çözümleri"
+    type: "Freelance"
+    period: "Eylül 2025 - Haziran 2026"
+  - role: "Endüstriyel Tasarım Ofis Stajyeri"
+    company: "Evimetal İnox Yapı Çözümleri"
+    type: "Staj"
+    period: "Temmuz 2025 - Ağustos 2025"
+  - role: "Üretim Stajyeri"
+    company: "BST Office"
+    type: "Staj"
+    period: "Temmuz 2024 - Ağustos 2024"
+  - role: "Atölye Asistanı"
+    company: "FabLab"
+    type: "Büro Memuru"
+    period: "Ekim 2024 - Haziran 2025"
+  - role: "Tasarımcı"
+    company: "Yaban Domuzu Dergisi"
+    type: "Tasarımcı"
+    period: "Eylül 2022 - Haziran 2024"
+
+skills:
+  - "Siemens NX"
+  - "Rhinoceros 3D"
+  - "SolidWorks"
+  - "Autodesk Fusion 360"
+  - "Blender"
+  - "Figma"
+  - "Adobe Photoshop"
+  - "Adobe Illustrator"
+  - "3D Baskı ve Hızlı Prototipleme"
+  - "Ürün Görselleştirme ve Render"
+
+interests:
+  - "Video Düzenleme"
+  - "3D Animasyon"
+  - "Dijital İllüstrasyon"
+  - "Felsefe"
+  - "Müzik Üretimi"
+
+footer_copyright: "© 2026 Tolga Ersan. Tüm Hakları Saklıdır."

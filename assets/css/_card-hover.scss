@@ -1,0 +1,16 @@
+@media (hover: hover) {
+  .project-card:hover .project-card__img {
+    transform: scale(1.04);
+    filter: blur(2px) brightness(0.6);
+  }
+
+  .project-card:hover .project-card__overlay {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .project-card:hover .project-card__title,
+  .project-card:hover .project-card__subtitle {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

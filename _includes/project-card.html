@@ -1,0 +1,11 @@
+<a href="{{ project.url | relative_url }}" class="project-card reveal reveal--delay-{{ delay | default: '1' }}">
+  <div class="project-card__media">
+    <img src="{{ project.thumbnail_path | relative_url }}" alt="{{ project.title }}" class="project-card__img">
+    <div class="project-card__overlay">
+      <div class="project-card__overlay-content">
+        <h3 class="project-card__title">{{ project.title }}</h3>
+        <span class="project-card__subtitle">{{ project.category }}</span>
+      </div>
+    </div>
+  </div>
+</a>

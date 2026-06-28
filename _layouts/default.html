@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="tr">
+{% include head.html %}
+<body>
+  {% include header.html %}
+
+  <main class="site-main transition-fade" id="main-content">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+  {% include lightbox.html %}
+
+  <!-- Core Scripts -->
+  <script src="/assets/js/lightbox.js"></script>
+  <script src="https://unpkg.com/swup@4"></script>
+  <script src="/assets/js/page-transitions.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

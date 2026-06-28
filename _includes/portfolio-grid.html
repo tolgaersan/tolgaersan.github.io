@@ -1,0 +1,6 @@
+<div class="portfolio-grid">
+  {% for project in include.projects %}
+    {% assign delay_index = forloop.index0 | modulo: 3 | plus: 1 %}
+    {% include project-card.html project=project delay=delay_index %}
+  {% endfor %}
+</div>

@@ -1,0 +1,12 @@
+.site-footer {
+  padding: var(--footer-padding-v) 2rem;
+  text-align: center;
+  background-color: var(--color-bg-footer);
+}
+
+.site-footer__copyright {
+  font-family: var(--font-ui);
+  font-size: var(--text-footer);
+  color: var(--color-text-secondary);
+  letter-spacing: 0.05em;
+}

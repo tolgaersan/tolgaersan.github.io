@@ -1,0 +1,135 @@
+.about {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 2rem 5rem;
+  text-align: center;
+}
+
+.about__profile {
+  margin-bottom: 3rem;
+}
+
+.about__image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
+.about__bio {
+  font-size: var(--text-body);
+  line-height: 1.8;
+  color: var(--color-text-body);
+  margin-bottom: 2rem;
+}
+
+.about__section {
+  margin-bottom: 3rem;
+}
+
+.about__section-title {
+  font-family: var(--font-ui);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 0.5rem;
+  display: block;
+  text-align: center;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: left;
+}
+
+.timeline__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: stretch;
+}
+
+.timeline__company {
+  color: var(--color-text-primary);
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.timeline__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.timeline__role {
+  color: var(--color-text-body);
+  font-size: 0.95rem;
+}
+
+.timeline__period {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.skills-list, .interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.skill-tag, .interest-tag {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: var(--color-text-body);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.contact-info__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.95rem;
+}
+
+.contact-info__label {
+  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contact-info__value {
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.contact-info__value a {
+  transition: color 200ms ease;
+}
+
+.contact-info__value a:hover {
+  color: var(--color-text-secondary);
+}

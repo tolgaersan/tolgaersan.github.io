@@ -1,0 +1,20 @@
+---
+---
+/* 
+  Main CSS File
+  Imports all partials in logical order
+*/
+
+@import "variables";
+@import "reset";
+@import "header";
+@import "hero";
+@import "grid";
+@import "card-hover";
+@import "lightbox";
+@import "about";
+@import "works";
+@import "project";
+@import "footer";
+@import "animations";
+@import "responsive";

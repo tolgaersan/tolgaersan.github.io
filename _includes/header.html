@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="{{ '/' | relative_url }}" class="site-header__name">{{ site.name }}</a>
+    
+    <nav class="site-header__nav">
+      {% include nav.html %}
+    </nav>
+
+    <button class="site-header__hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,1 @@
+İlaç kullanımında 'Unuttum mu?' sorusunu ortadan kaldıran, görsel geri bildirim odaklı kompakt tasarım. Orta kısımdaki interaktif mekanizma, kullanıcının dozu aldığını fiziksel olarak işaretlemesini sağlayarak güvenli bir rutin oluşturur.

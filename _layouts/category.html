@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<header class="category-header reveal">
+  <div class="breadcrumb">
+    <a href="{{ '/works/' | relative_url }}">Çalışmalar</a>
+    <span class="breadcrumb__separator">/</span>
+    <span>{{ page.title }}</span>
+  </div>
+  <h1 class="category-title">{{ page.title }}</h1>
+</header>
+
+<section class="portfolio-section">
+  {% assign category_projects = site.portfolio_projects | where: "category", page.title | sort: 'order' %}
+  {% include portfolio-grid.html projects=category_projects %}
+</section>

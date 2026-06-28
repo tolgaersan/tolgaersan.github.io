@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<section class="hero reveal">
+  <h1 class="hero__greeting">{{ site.hero_greeting }}</h1>
+  <p class="hero__description">{{ site.hero_description }}</p>
+</section>
+
+<section class="portfolio-section">
+  {% assign all_projects = site.portfolio_projects | sort: 'order' %}
+  {% include portfolio-grid.html projects=all_projects %}
+</section>

@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<article class="project-detail reveal">
+  <header class="project-header">
+    <div class="breadcrumb">
+      <a href="{{ '/works/' | relative_url }}">Çalışmalar</a>
+      <span class="breadcrumb__separator">/</span>
+      <a href="{{ page.category_url | relative_url }}">{{ page.category }}</a>
+    </div>
+    <h1 class="project-title">{{ page.title }}</h1>
+    
+    {% if page.description %}
+    <div class="project-description">
+      {{ page.description | markdownify }}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="project-gallery" data-count="{{ page.media_gallery.size }}" {% if page.media_gallery.size > 4 %}data-count-more="true"{% endif %}>
+    {% for media in page.media_gallery %}
+      {% assign media_ext = media | slice: -4, 4 | downcase %}
+      {% if forloop.index > 4 %}
+        {% assign hidden_class = "is-hidden-in-grid" %}
+      {% else %}
+        {% assign hidden_class = "" %}
+      {% endif %}
+      
+      <div class="gallery-item {{ hidden_class }} reveal reveal--delay-1">
+        {% if media_ext == '.mp4' %}
+          <video class="gallery-item__video js-lightbox-trigger" data-type="video" data-src="{{ media | relative_url }}" autoplay loop muted playsinline>
+            <source src="{{ media | relative_url }}" type="video/mp4">
+          </video>
+        {% else %}
+          <img src="{{ media | relative_url }}" alt="{{ page.title }} Görseli" class="gallery-item__img js-lightbox-trigger" data-type="image" data-src="{{ media | relative_url }}">
+        {% endif %}
+        
+        {% if forloop.index == 4 and page.media_gallery.size > 4 %}
+          <div class="gallery-item__more-overlay">
+            +{{ page.media_gallery.size | minus: 4 }}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</article>

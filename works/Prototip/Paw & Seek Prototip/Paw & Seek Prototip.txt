@@ -1,0 +1,1 @@
+Renkli ve eğlenceli bir stratejik hafıza oyunu prototipidir. Mevcut bir oyun mekanizması temel alınarak, özgün bir konsept ve geliştirilmiş oyun dinamikleri ile tasarlanmıştır.

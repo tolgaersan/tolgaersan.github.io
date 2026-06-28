@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<section class="works-categories reveal">
+  <div class="works-grid">
+    {% assign sorted_categories = site.portfolio_categories | sort: 'title' %}
+    {% for category in sorted_categories %}
+    <a href="{{ category.url | relative_url }}" class="category-card reveal reveal--delay-{{ forloop.index }}">
+      {% if category.thumbnail %}
+        <img src="{{ category.thumbnail | relative_url }}" alt="{{ category.title }}" class="category-card__img">
+      {% else %}
+        <div class="category-card__img" style="background-color: var(--color-bg-card)"></div>
+      {% endif %}
+      <div class="category-card__content">
+        <h2 class="category-card__title">{{ category.title }}</h2>
+        <span class="category-card__count">{{ category.project_count }} Proje</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</section>

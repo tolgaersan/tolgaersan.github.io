@@ -1,0 +1,65 @@
+---
+layout: default
+---
+
+<article class="about reveal">
+  <div class="about__profile">
+    <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="{{ site.name }}" class="about__image">
+    <h1 class="project-title">{{ site.name }}</h1>
+    <p class="about__bio">{{ site.about_bio }}</p>
+  </div>
+
+  <div class="about__section reveal reveal--delay-1">
+    <h2 class="about__section-title">Deneyim</h2>
+    <div class="timeline">
+      {% for exp in site.experience %}
+      <div class="timeline__item">
+        <h3 class="timeline__company">{{ exp.company }}</h3>
+        <div class="timeline__details">
+          <span class="timeline__role">
+            {% if exp.type != empty %}{{ exp.type }} - {% endif %}{{ exp.role }}
+          </span>
+          <span class="timeline__period">{{ exp.period }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="about__section reveal reveal--delay-2">
+    <h2 class="about__section-title">Yetenekler & Yazılımlar</h2>
+    <div class="skills-list">
+      {% for skill in site.skills %}
+      <span class="skill-tag">{{ skill }}</span>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="about__section reveal reveal--delay-3">
+    <h2 class="about__section-title">İlgi Alanları</h2>
+    <div class="interests-list">
+      {% for interest in site.interests %}
+      <span class="interest-tag">{{ interest }}</span>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="about__section reveal reveal--delay-3">
+    <h2 class="about__section-title">İletişim</h2>
+    <div class="contact-info">
+      <div class="contact-info__item">
+        <span class="contact-info__label">Telefon</span>
+        <span class="contact-info__value"><a href="tel:{{ site.contact_phone | replace: ' ', '' }}">{{
+            site.contact_phone }}</a></span>
+      </div>
+      <div class="contact-info__item">
+        <span class="contact-info__label">E-posta</span>
+        <span class="contact-info__value"><a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></span>
+      </div>
+      <div class="contact-info__item">
+        <span class="contact-info__label">Konum</span>
+        <span class="contact-info__value">{{ site.contact_location }}</span>
+      </div>
+    </div>
+  </div>
+</article>

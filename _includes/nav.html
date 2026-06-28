@@ -1,0 +1,5 @@
+{% for item in site.nav_links %}
+  <a href="{{ item.url | relative_url }}" class="site-header__nav-link {% if page.url == item.url %}is-active{% endif %}">
+    {{ item.label }}
+  </a>
+{% endfor %}

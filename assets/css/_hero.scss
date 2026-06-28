@@ -1,0 +1,24 @@
+.hero {
+  text-align: center;
+  padding: var(--hero-padding-v) 2rem;
+  background-color: var(--color-bg-hero);
+}
+
+.hero__greeting {
+  font-family: var(--font-ui);
+  font-size: var(--text-hero-h);
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.hero__description {
+  font-family: var(--font-ui);
+  font-size: var(--text-hero-p);
+  font-weight: 300;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 450px;
+  margin: 0 auto;
+  letter-spacing: var(--tracking-hero);
+}
