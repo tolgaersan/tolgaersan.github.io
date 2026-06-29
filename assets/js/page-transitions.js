@@ -10,5 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.lightbox && typeof window.lightbox.updateItems === 'function') {
       window.lightbox.updateItems();
     }
+    
+    // Close mobile menu if open
+    const hamburger = document.querySelector('.site-header__hamburger');
+    const nav = document.querySelector('.site-header__nav');
+    if (hamburger && nav) {
+      hamburger.classList.remove('is-active');
+      nav.classList.remove('is-open');
+    }
   });
 });

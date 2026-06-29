@@ -54,6 +54,32 @@
   margin-bottom: 0;
 }
 
+/* Support for custom HTML tags in txt descriptions */
+.project-description h1, 
+.project-description h2, 
+.project-description h3 {
+  font-family: var(--font-display);
+  color: var(--color-text-primary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.project-description h1 { font-size: 2rem; }
+.project-description h2 { font-size: 1.5rem; }
+.project-description h3 { font-size: 1.25rem; }
+
+.project-description b, 
+.project-description strong { 
+  font-weight: 500; 
+  color: var(--color-text-primary); 
+}
+
+.project-description i, 
+.project-description em { 
+  font-style: italic; 
+}
+
 .project-gallery {
   display: grid;
   gap: var(--color-gallery-gap);
@@ -67,36 +93,57 @@
 .project-gallery[data-count="1"] {
   grid-template-columns: 1fr;
 }
-
-/* 2 images: side by side */
-.project-gallery[data-count="2"] {
-  grid-template-columns: 2fr 1fr;
-  grid-auto-rows: 400px;
+.project-gallery[data-count="1"] .gallery-item {
+  aspect-ratio: 7/5;
 }
-.project-gallery[data-count="2"] .gallery-item:nth-child(1) { grid-row: 1 / 2; grid-column: 1 / 2; }
-.project-gallery[data-count="2"] .gallery-item:nth-child(2) { grid-row: 1 / 2; grid-column: 2 / 3; }
 
-/* 3 images */
-.project-gallery[data-count="3"] {
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 250px 250px;
-}
-.project-gallery[data-count="3"] .gallery-item:nth-child(1) { grid-row: 1 / 3; grid-column: 1 / 2; }
-.project-gallery[data-count="3"] .gallery-item:nth-child(2) { grid-row: 1 / 2; grid-column: 2 / 3; }
-.project-gallery[data-count="3"] .gallery-item:nth-child(3) { grid-row: 2 / 3; grid-column: 2 / 3; }
-
-/* 4+ images */
+/* 2, 3, 4+ images: Always 3fr 1fr so right side items are consistently small */
+.project-gallery[data-count="2"],
+.project-gallery[data-count="3"],
 .project-gallery[data-count="4"],
 .project-gallery[data-count-more="true"] {
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 200px 200px 200px;
+  grid-template-columns: 3fr 1fr;
 }
+
+/* Right side items are ALWAYS strictly 7:5 */
+.project-gallery[data-count="2"] .gallery-item:nth-child(n+2),
+.project-gallery[data-count="3"] .gallery-item:nth-child(n+2),
+.project-gallery[data-count="4"] .gallery-item:nth-child(n+2),
+.project-gallery[data-count-more="true"] .gallery-item:nth-child(n+2) { 
+  aspect-ratio: 7/5; 
+}
+
+/* Left side item always spans 3 rows */
+.project-gallery[data-count="2"] .gallery-item:nth-child(1),
+.project-gallery[data-count="3"] .gallery-item:nth-child(1),
 .project-gallery[data-count="4"] .gallery-item:nth-child(1),
-.project-gallery[data-count-more="true"] .gallery-item:nth-child(1) { grid-row: 1 / 4; grid-column: 1 / 2; }
+.project-gallery[data-count-more="true"] .gallery-item:nth-child(1) { 
+  grid-row: 1 / 4; 
+  grid-column: 1 / 2; 
+}
+
+/* To prevent the left item from collapsing when there are less than 3 right items, enforce 7:5 */
+.project-gallery[data-count="2"] .gallery-item:nth-child(1),
+.project-gallery[data-count="3"] .gallery-item:nth-child(1) {
+  aspect-ratio: 7/5;
+}
+
+/* For 4+ images, let the left item stretch automatically to match the right column's full height perfectly */
+.project-gallery[data-count="4"] .gallery-item:nth-child(1),
+.project-gallery[data-count-more="true"] .gallery-item:nth-child(1) {
+  aspect-ratio: auto;
+}
+
+/* Row assignments for right items */
+.project-gallery[data-count="2"] .gallery-item:nth-child(2),
+.project-gallery[data-count="3"] .gallery-item:nth-child(2),
 .project-gallery[data-count="4"] .gallery-item:nth-child(2),
 .project-gallery[data-count-more="true"] .gallery-item:nth-child(2) { grid-row: 1 / 2; grid-column: 2 / 3; }
+
+.project-gallery[data-count="3"] .gallery-item:nth-child(3),
 .project-gallery[data-count="4"] .gallery-item:nth-child(3),
 .project-gallery[data-count-more="true"] .gallery-item:nth-child(3) { grid-row: 2 / 3; grid-column: 2 / 3; }
+
 .project-gallery[data-count="4"] .gallery-item:nth-child(4),
 .project-gallery[data-count-more="true"] .gallery-item:nth-child(4) { grid-row: 3 / 4; grid-column: 2 / 3; }
 
@@ -136,6 +183,7 @@
 }
 
 @media (hover: hover) {
+
   .gallery-item:hover .gallery-item__img,
   .gallery-item:hover .gallery-item__video {
     transform: scale(1.02);
@@ -143,11 +191,13 @@
 }
 
 @media (max-width: 767px) {
+
   .project-gallery[data-count],
   .project-gallery[data-count-more="true"] {
     display: flex;
     flex-direction: column;
   }
+
   .gallery-item {
     height: auto;
     aspect-ratio: 4/3;
