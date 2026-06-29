@@ -8,3 +8,6 @@ vendor/
 *.swp
 .DS_Store
 Thumbs.db
+github-info
+Guncelle.bat
+github.ps1
